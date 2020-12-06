@@ -16,6 +16,7 @@
     height: 60px;
     width: 1700px;
     background: #1a1a1a;
+    z-index:10;
 }
 .nav li{
     float: left;
@@ -25,6 +26,7 @@
 .nav ul {
     position: relative;
     left: 110px;
+    z-index:10;
 }
 .nav li a{
     color: white;

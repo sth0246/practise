@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-#view{
-    width: 400px;
-    height: 200px;
-    position: relative;
-    left: 0px;
-}
-#view img{
-    width: 100px;
-    height: 200px;
-    display: block;
-    float: left;
-}
+        .box{
+         width: 800px;
+         height: 300px;
+         overflow: hidden;   
+        }
+        ul{
+            width: 4000px;
+            height: 300px;
+
+        }
+        ul{
+            position: relative;
+            left: -150px;
+            float: left;
+        }
+        img{
+            width: 800px;
+            height: 300px;
+        }
+        #cut>a{
+            width: 40px;
+            height: 40px;
+        }
+        #btn{
+            position: absolute;
+            left: 350px;
+            top: 250px;
+        }
+        #btn>a{
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: red;
+            border-radius: 50%;
+        }
     </style>
 </head>
+
 <body>
-    <div id="view"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img
-        src="images/img3.jpg" alt=""><img src="images/img4.jpg" alt=""><img src="images/img5.jpg" alt="">
-</div>
-</body><script>var i = 0
-    var change = document.getElementById("view")
-    function changeimg(){
-        i++
-        change.style.left =  i + "px"
-    }
-    setInterval("changeimg()",1)</script>
+    <div class="box">
+        
+            <ul>
+                <li><img src="images/img1.jpg" alt=""></li>
+                <li><img src="images/img2.jpg" alt=""></li>
+                <li><img src="images/img3.jpg" alt=""></li>
+                <li><img src="images/img4.jpg" alt=""></li>
+                <li><img src="images/img5.jpg" alt=""></li>
+            </ul>
+        
+        <div id="cut">
+            <a href="#"><</a>
+            <a href="#">></a>
+        </div>
+        <div id="btn">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+</body>
+
 </html>

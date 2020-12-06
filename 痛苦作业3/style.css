@@ -1,0 +1,92 @@
+*{
+    margin: auto;
+}
+.header{
+    height: 40px;
+    width: 100%;
+    background: #1a1a1a;
+}
+.header img{
+    position: relative;
+    left: 160px;
+    top: 20px;
+}
+.nav{
+    float: left;
+    height: 60px;
+    width: 1700px;
+    background: #1a1a1a;
+}
+.nav li{
+    float: left;
+    list-style: none;
+    padding: 13.5px 15px;
+}
+.nav ul {
+    position: relative;
+    left: 110px;
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+    
+}
+.nav li a:hover{
+    color: #0078d4;
+}
+.nav ul li:hover {
+    border-bottom: 2px solid #0078d4;
+}
+.nav dl{
+    position: absolute;
+    top: 50px;
+    display: none;
+    background-color: white;
+}
+.nav dl dd{
+    margin: 20px;
+}
+.nav dl dd a{
+    color: #1a1a1a;
+}
+.nav li:hover dl{
+    display: block;
+}
+
+.nav p {
+    display: inline-block;
+    color: #afafaf;
+    font-size: 8px;
+
+}
+.lev2{
+    height: 746px;
+}
+.lev2 li{
+    float: none;
+    
+    position: absolute;
+}
+.nav ul li:hover .lev2 li{
+    display: block;
+}
+.changeimg{
+    height: 800px;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+.windows{
+    width: 1609px;
+    height: 370px;
+    overflow: hidden;
+}
+#view{
+    width: 8045px;
+    height: 370px;
+    position: relative;
+    left: 0px;
+}
+#view img{
+    display: block;
+    float: left;
+}

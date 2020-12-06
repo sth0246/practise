@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#view{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    left: 0px;
+}
+#view img{
+    width: 100px;
+    height: 200px;
+    display: block;
+    float: left;
+}
+    </style>
+</head>
+<body>
+    <div id="view"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img
+        src="images/img3.jpg" alt=""><img src="images/img4.jpg" alt=""><img src="images/img5.jpg" alt="">
+</div>
+</body><script>var i = 0
+    var change = document.getElementById("view")
+    function changeimg(){
+        i++
+        change.style.left =  i + "px"
+    }
+    setInterval("changeimg()",1)</script>
+</html>

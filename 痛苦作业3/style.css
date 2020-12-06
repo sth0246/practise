@@ -16,6 +16,10 @@
     height: 60px;
     width: 1700px;
     background: #1a1a1a;
+<<<<<<< HEAD
+=======
+    z-index:10;
+>>>>>>> 60cd6031d27c69dfcf2ce5914839c32e6136c958
 }
 .nav li{
     float: left;
@@ -25,6 +29,10 @@
 .nav ul {
     position: relative;
     left: 110px;
+<<<<<<< HEAD
+=======
+    z-index:10;
+>>>>>>> 60cd6031d27c69dfcf2ce5914839c32e6136c958
 }
 .nav li a{
     color: white;

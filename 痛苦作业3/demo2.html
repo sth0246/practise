@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+              * {
+	transition: all 1s;
+	margin: 0px;
+	padding: 0px;
+}
         .box{
          width: 800px;
          height: 300px;
-         overflow: hidden;   
+          overflow: hidden;
         }
         ul{
             width: 4000px;
             height: 300px;
-
-        }
-        ul{
             position: relative;
-            left: -150px;
+            left:0px ;
+        }
+        li{
             float: left;
         }
         img{
@@ -41,13 +45,16 @@
             background-color: red;
             border-radius: 50%;
         }
+        #btn .on {
+            background-color: green;
+        }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="box" id="position">
         
-            <ul>
+            <ul id="change">
                 <li><img src="images/img1.jpg" alt=""></li>
                 <li><img src="images/img2.jpg" alt=""></li>
                 <li><img src="images/img3.jpg" alt=""></li>
@@ -60,7 +67,7 @@
             <a href="#">></a>
         </div>
         <div id="btn">
-            <a href="#"></a>
+            <a href="#" class="on"></a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
@@ -68,5 +75,25 @@
         </div>
     </div>
 </body>
-
+<script>
+    var i = 0
+    var z = 0
+    var position = document.getElementById("change")
+    var btn = document.getElementById("btn")
+    
+    function changeimg(){
+        i+=800
+        z++
+        position.style.left = "-"+i+"px"
+        
+        if(i==3200){
+            i = 0
+            z = 0
+        }
+    }
+    setInterval("changeimg()",1000)
+    // function aaa(){
+    //     aaa = setInterval("changeimg()",1)
+    // }
+    </script>
 </html>

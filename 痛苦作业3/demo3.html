@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 样式 */
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 700px;
+            height: 525px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #box ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #box ul li {
+            float: left;
+        }
+
+        #box p {
+            width: 700px;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        #box p span {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        #box p .active{
+            background: yellow;
+        }
+
+        #box div button{
+            display: block;
+            width: 30px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin:auto;
+            background: #ccc;
+        }
+        #box div #right{
+            right: 0;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //获取所需元素
+            var box = document.getElementById('box');
+            var ul = document.getElementsByTagName('ul')[0]
+            var oP = box.getElementsByTagName('p')[0];
+            var span=oP.getElementsByTagName('span');
+            var right=document.getElementById('right');
+            var left=document.getElementById('left');
+            //定义数组，存放图片路径
+            var imgSrc = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"]
+            for (var i = 0; i < imgSrc.length; i++) {   //利用循环插入li标签和img
+                ul.innerHTML += '<li><img src="' + imgSrc[i] + '"></li>'
+                oP.innerHTML += '<span></span>'   //在p里面添加span标签，小圆点样式
+            }
+            // console.log(oP.innerHTML)
+            ul.innerHTML += ul.innerHTML; //复制一遍图片，方便实现轮播切换
+            span[0].className='active'
+            var li = ul.getElementsByTagName('li');
+            //给ul设置宽度
+            ul.style.width = 700 * li.length + 'px';
+            //封装轮播函数
+            var sum = 0;
+            var timer=null;
+            function autoMove() {
+                sum++;
+                if (sum > li.length / 2) {
+                    sum = 1;
+                    ul.style.left = '0px';
+                }
+                move(ul, 'left', -700 * sum, 30)
+                for(var j=0;j<span.length;j++){
+                    span[j].className='';
+                }
+                if(sum==span.length){
+                    span[0].className='active'
+                }else{
+                    span[sum].className='active';
+                }
+            }
+
+            //调用封装函数，实现自动轮播
+            timer=setInterval(autoMove, 2000)
+
+            //点击小圆点切换
+            for(var i=0;i<span.length;i++){
+                span[i].index=i;//自定义索引
+                span[i].onclick=function(){ //添加点击事件
+                    clearInterval(timer);   //清除定时器
+                    sum = this.index;
+                    for(var j=0;j<span.length;j++){
+                        span[j].className='';  //去掉所有小圆点的样式
+                    }
+                    this.className='active';   //为当前小圆点加上样式
+                    move(ul, 'left', -700 * sum, 30)   //调用运动封装函数
+                    timer=setInterval(autoMove, 2000)
+
+                }
+            }
+
+            //滑过停止定时器
+            ul.onmouseover=function(){
+                clearInterval(timer)
+            }
+            //滑离开启定时器
+            ul.onmouseout=function(){
+                timer=setInterval(autoMove, 2000)
+            }
+
+            //右击切换
+            right.onclick=function(){
+                clearInterval(timer);
+                autoMove();
+                timer=setInterval(autoMove, 2000)
+            }
+            // 左边按钮
+            left.onclick=function(){
+                clearInterval(timer)
+                sum-=2;//因为调用的函数里面要自增，所以减去2
+                if(sum<-1){
+                    sum=span.length;//改变sum的值
+                    ul.style.left=-700*sum+'px';//到第五张图片，下标为4
+                    console.log(sum)
+                    sum-=2;//下标为2
+                }
+                autoMove();//在调用时，sum右自增了一
+                timer = setInterval(autoMove,5000);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+
+        </ul>
+        <p></p>
+        <div>
+            <button id="right">&gt;</button>
+            <button id="left">&lt;</button>
+        </div>
+    </div>
+</body>
+<script>// 获取非行间样式封装函数
+    function getStyle(obj, arr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[arr];
+        } else {
+            return getComputedStyle(obj)[arr];
+        }
+    }
+    
+    
+    //封装运动框架
+    function move(obj, attr, tag, dir) {
+        //利用属性值的大小判断正负
+        dir = tag > parseInt(getStyle(obj, attr)) ? dir : -dir;
+        clearInterval(obj.timer)
+        obj.timer = setInterval(function () {
+            //获取obj的非行间attr属性值，赋给一个变量，因为行间的left属性是没有返回值的，要想进行计算，必须利用非行间样式的返回值
+            var speed = parseInt(getStyle(obj, attr)) + dir;
+            if (speed >= tag && dir > 0 || speed <= tag && dir < 0) {//判断到什么地方停止运动
+                clearInterval(obj.timer);//到达目标值时清除定时器
+                speed = tag;//让运动对象定格在那个位置
+            }
+            obj.style[attr] = speed + 'px';//把属性值赋给运动对象
+        }, 20)
+    }
+    </script>  //引入js文件
+
+</html>

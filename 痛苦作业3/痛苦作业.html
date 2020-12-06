@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header"><a href="#"><img src="images/logo.jpg" alt=""></a></div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">认识Azure</a>
+                <dl>
+                    <dd style="color: #1a1a1a;"><a href="#">什么是Azure？</br>
+                            <p>了解Azure服务基础知识</p>
+                        </a></dd>
+                    <dd><a href="#">中国版Azure（世纪互联运营）vs.全球版Azure</br>
+                            <p>哪种公有云更适合你？</p>
+                        </a></dd>
+                    <dd><a href="#">Azure可用服务</br>
+                            <p>Azure中国可用服务列表</p>
+                        </a></dd>
+                </dl>
+            </li>
+            <li><a href="#">产品</a>
+                <ul class="lev2">
+                    <li><a href="#">AI ></a></li>
+                    <li><a href="#">Azure Stack ></a></li>
+                    <li><a href="#">安全性 ></a></li>
+                    <li><a href="#">标识 ></a></li>
+                    <li><a href="#">存储 ></a></li>
+                    <li><a href="#">分析 ></a></li>
+                </ul>
+            </li>
+            <li><a href="#">价格</a></li>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">案例与伙伴</a>
+                <dl>
+                    <dd><a href="#">案例研究</br>
+                            <p>人们正在使用Azure做着令人惊叹的事，来听听他们的故事吧</p>
+                        </a></dd>
+                    <dd><a href="#">寻找合作伙伴</br>
+                            <p>通过经验丰富的合作伙伴的帮助在云中启动并运行业务</p>
+                        </a></dd>
+                </dl>
+            </li>
+            <li><a href="#">文档</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">培训</a></li>
+            <li><a href="#">支持</a></li>
+            <li><a href="#">Azure市场</a></li>
+            <li><a href="#">Azure Global/China</a></li>
+        </ul>
+    </div>
+    <div class="changeimg">
+        <div class="windows">
+            <div id="view"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img
+                    src="images/img3.jpg" alt=""><img src="images/img4.jpg" alt=""><img src="images/img5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var i = 0
+    var change = document.getElementById("view")
+    function changeimg() {
+        i=i+2;
+        change.style.left = "-" + i + "px";
+       
+    }
+    setInterval("changeimg()", 1)
+</script>
+
+</html>

@@ -25,16 +25,7 @@
                         </a></dd>
                 </dl>
             </li>
-            <li><a href="#">产品</a>
-                <ul class="lev2">
-                    <li><a href="#">AI ></a></li>
-                    <li><a href="#">Azure Stack ></a></li>
-                    <li><a href="#">安全性 ></a></li>
-                    <li><a href="#">标识 ></a></li>
-                    <li><a href="#">存储 ></a></li>
-                    <li><a href="#">分析 ></a></li>
-                </ul>
-            </li>
+            <li onmouseover="menu()" onmouseout="menua()"><a href="#">产品</a></li>
             <li><a href="#">价格</a></li>
             <li><a href="#">解决方案</a></li>
             <li><a href="#">案例与伙伴</a>
@@ -55,6 +46,33 @@
             <li><a href="#">Azure Global/China</a></li>
         </ul>
     </div>
+    <div class="lev2" id="lev2" onmouseover="menu()" onmouseout="menua()">
+        <ul>
+            <li>AI
+                <dd>
+                    <dl>1234567687980</dl>
+                    <dl>1234567687980</dl>
+                    <dl>1234567687980</dl>
+                    <dl>1234567687980</dl>
+                    <dl>1234567687980</dl>
+                    <dl>1234567687980</dl>
+                </dd>
+            </li>
+            <li>Azure Stack</li>
+            <li>安全性</li>
+            <li>标识</li>
+            <li>存储</li>
+            <li>分析</li>
+            <li>管理工具</li>
+            <li>集成</li>
+            <li>计算</li>
+            <li>联网</li>
+            <li>媒体</li>
+            <li>迁移</li>
+            <li>容器</li>
+            <li>数据库</li>
+        </ul>
+    </div>
     <div class="changeimg">
         <div class="windows">
             <div id="view"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img
@@ -63,14 +81,20 @@
         </div>
     </div>
     <div class="guide">
-        <a href="#"><div class="img1"></div></a>
-        <a href="#"><div class="img2"></div></a>
-        <a href="#"><div class="img3"></div></a>
+        <a href="#">
+            <div class="img1"></div>
+        </a>
+        <a href="#">
+            <div class="img2"></div>
+        </a>
+        <a href="#">
+            <div class="img3"></div>
+        </a>
     </div>
     <div class="row">
         <ul>
             <li>电子商务
-                
+
             </li>
             <li>数字媒体</li>
             <li>备份与存档</li>
@@ -81,15 +105,14 @@
         </ul>
     </div>
 </body>
-<!-- <script>
-    var i = 0
-    var change = document.getElementById("view")
-    function changeimg() {
-        i=i+2;
-        change.style.left = "-" + i + "px";
-       
+<script>
+    var menu1 = document.getElementById("lev2")
+    function menu(){
+        menu1.style.display = "block"
     }
-    setInterval("changeimg()", 1)
-</script> -->
+    function menua(){
+        menu1.style.display = "none"
+    }
+</script>
 
 </html>

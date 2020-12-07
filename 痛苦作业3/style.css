@@ -1,9 +1,6 @@
 *{
     margin: auto;
 }
-html{
-    
-}
 .header{
     height: 40px;
     width: 100%;
@@ -57,22 +54,44 @@ html{
 .nav li:hover dl{
     display: block;
 }
-
 .nav p {
     display: inline-block;
     color: #afafaf;
     font-size: 8px;
 
 }
+#lev2{
+    display: none;
+}
 .lev2{
-    height: 746px;
+    position: absolute;
+    top: 90px;
+    left: 283px;
+    width: 200px;
+    background-color: black;
+    z-index: 11;
 }
 .lev2 li{
-    float: none;
-    
-    position: absolute;
+    color: white;
+    list-style: none;
+  padding: 13px 15px;
+    cursor: pointer;
+    margin-left: -40px;
 }
-.nav ul li:hover .lev2 li{
+.lev2 li:hover{
+    background-color: #0078d4;
+}
+.lev2 ul li dd {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    height: 658px;
+    width: 400px;
+    color: gray;
+    background-color: white;
+}
+.lev2 ul li:hover dd {
     display: block;
 }
 .changeimg{

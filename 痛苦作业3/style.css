@@ -22,6 +22,7 @@
     float: left;
     list-style: none;
     padding: 13.5px 15px;
+    cursor: pointer;
 }
 .nav ul {
     position: relative;
@@ -157,7 +158,29 @@ background-color: #e2e6ec;
     background: url(images/zxgg1.jpg);
 }
 .row{
+    position: absolute;
     width: 100%;
     height: 410px;
-    background-color: skyblue;
+    background-color: #0078d4;
+}
+.row li {
+    color: black;
+    margin-left: -10px;
+    list-style: none;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.row li:hover {
+    color: white;
+    background-color: black;
+}
+
+.row ul li dd{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    height: 357px;
+    width: 400px;
+    background-color: pink;
+    cursor: auto;
 }

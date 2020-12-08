@@ -54,11 +54,11 @@
 .nav li:hover dl{
     display: block;
 }
-.nav p {
+p {
     display: inline-block;
     color: #afafaf;
     font-size: 8px;
-
+    cursor: pointer;
 }
 #lev2{
     display: none;
@@ -66,8 +66,8 @@
 .lev2{
     position: absolute;
     top: 90px;
-    left: 283px;
-    width: 200px;
+    left: 250px;
+    width: 250px;
     background-color: black;
     z-index: 11;
 }
@@ -75,24 +75,36 @@
     color: white;
     list-style: none;
   padding: 13px 15px;
-    cursor: pointer;
     margin-left: -40px;
+    cursor: pointer;
 }
 .lev2 li:hover{
     background-color: #0078d4;
 }
 .lev2 ul li dd {
+    cursor: auto;
     display: none;
     position: absolute;
     top: 0px;
-    left: 200px;
+    left: 250px;
     height: 658px;
     width: 400px;
     color: gray;
     background-color: white;
 }
+.lev2 ul li dl{
+    color: black;
+    padding: 12px 15px;
+}
 .lev2 ul li:hover dd {
     display: block;
+}
+.lev2 a{
+    text-decoration: none;
+    color: black;
+}
+.lev2 a:hover{
+    color: #0078d4;
 }
 .changeimg{
     height: 430px;
@@ -116,8 +128,9 @@
     height: 100%;
 }
 .guide{
-width: 1581px;
+width: 1903px;
 height: 172px;
+background-color: #e2e6ec;
 }
 .guide div{
     width: 527px;

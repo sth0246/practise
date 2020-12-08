@@ -163,12 +163,17 @@ background-color: #e2e6ec;
     height: 410px;
     background-color: #0078d4;
 }
+.row ul {
+    margin-top: 60px;
+}
 .row li {
     color: black;
-    margin-left: -10px;
+    margin-left: 100px;
+    width: 130px;
     list-style: none;
-    padding: 15px 20px;
+    padding: 10px 20px;
     cursor: pointer;
+    touch-action: manipulation;
 }
 .row li:hover {
     color: white;
@@ -176,11 +181,15 @@ background-color: #e2e6ec;
 }
 
 .row ul li dd{
+    display: none;
     position: absolute;
-    top: 0px;
-    left: 400px;
-    height: 357px;
+    top: 60px;
+    left: 310px;
+    height: 288px;
     width: 400px;
     background-color: pink;
     cursor: auto;
+}
+.row li:active dd{
+    display: block;
 }

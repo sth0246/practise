@@ -198,28 +198,56 @@ background-color: #e2e6ec;
     width: 100%;
 }
 #main{
-    height: 400px;
+    margin: auto;
+    height: 688px;
     width: 100%;
-    background-color: green;
+    background-color:#fcfcfc;
+    overflow: hidden;
+    text-align: center;
 }
 #btn{
-
+    float: inline-end;
     display: block;
     position: relative;
-    top: 0px;
+    top: 595px;
+    z-index: 99;
     transition: all 1s linear;
 }
 .title-rd{
-    margin-left: 514px;
+   margin: 0 auto;
     font-size: 40px;
     color: #1A1A1A;
     font-weight: 500;
     line-height: 48px;
+    margin-bottom: 10px;
 }
 .container{
-    width: 1540px;
+    width: 1680px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 .container div {
-    width: 385px;
+    text-align: center;
+    
+    float: left;
+    width: 403px;
     height: 310px;
+    background-color:#ffffff;
+    border:1px solid rgb(236, 234, 234);
+}
+.container div img{
+    width: 100%;
+}
+.container div a{
+    font-size: 16px;
+    color: #0078D4;
+    line-height: 24px;
+    text-decoration: none;
+}
+.container div a:hover{
+    text-decoration: underline;
+}
+.container div:hover{
+    filter: brightness(95%);
+    transition: all 250ms linear;
 }

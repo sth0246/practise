@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
 <body>
     <div class="header"><a href="#"><img src="images/logo.jpg" alt=""></a></div>
@@ -192,14 +193,28 @@
             <li>数字营销</li>
         </ul>
     </div>
+    <div class="a"></div>
+    <div class="main" id="main">
+        <h2 class="title-rd">为您推荐全能高效的Azure产品</h2>
+        <div class="container">
+            <div></div>
+        </div>
+        <button id="btn" onclick="pull()">点击展开</button>
+    </div>
 </body>
 <script>
+    var pull1 = document.getElementById("main")
     var menu1 = document.getElementById("lev2")
+    var btn1 = document.getElementById("btn")
     function menu() {
         menu1.style.display = "block"
     }
     function menua() {
         menu1.style.display = "none"
+    }
+    function pull(){
+        pull1.style.height=800+"px"
+        btn1.style.display="none"
     }
 </script>
 

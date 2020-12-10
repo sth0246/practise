@@ -1,6 +1,10 @@
 *{
     margin: auto;
 }
+body{
+    min-width:1200px;
+    
+    }
 .header{
     height: 40px;
     width: 100%;
@@ -138,6 +142,7 @@ background-color: #e2e6ec;
     height: 172px;
     float: left;
     cursor: pointer;
+    transition: all 500ms;
 }
 .img1{
     background: url(images/jswd.jpg);
@@ -148,14 +153,9 @@ background-color: #e2e6ec;
 .img3{
     background: url(images/zxgg.jpg);
 }
-.img1:hover {
-    background: url(images/jswd1.jpg);
-}
-.img2:hover{
-    background: url(images/alyj1.jpg);
-}
-.img3:hover{
-    background: url(images/zxgg1.jpg);
+
+.guide div:hover{
+    filter: opacity(.5);
 }
 .row{
     position: absolute;
@@ -190,6 +190,36 @@ background-color: #e2e6ec;
     background-color: pink;
     cursor: auto;
 }
-.row li:active dd{
+.row li:hover dd{
     display: block;
+}
+.a{
+    height: 410px;
+    width: 100%;
+}
+#main{
+    height: 400px;
+    width: 100%;
+    background-color: green;
+}
+#btn{
+
+    display: block;
+    position: relative;
+    top: 0px;
+    transition: all 1s linear;
+}
+.title-rd{
+    margin-left: 514px;
+    font-size: 40px;
+    color: #1A1A1A;
+    font-weight: 500;
+    line-height: 48px;
+}
+.container{
+    width: 1540px;
+}
+.container div {
+    width: 385px;
+    height: 310px;
 }

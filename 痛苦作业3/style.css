@@ -3,7 +3,6 @@
 }
 body{
     min-width:1200px;
-    
     }
 .header{
     height: 40px;
@@ -209,9 +208,12 @@ background-color: #e2e6ec;
     float: inline-end;
     display: block;
     position: relative;
-    top: 595px;
+    width: 175px;
+    height: 75px;
+    background: url(images/pull.jpg);
     z-index: 99;
-    transition: all 1s linear;
+    cursor: pointer;
+    border: none;
 }
 .title-rd{
    margin: 0 auto;
@@ -250,4 +252,83 @@ background-color: #e2e6ec;
 .container div:hover{
     filter: brightness(95%);
     transition: all 250ms linear;
+}
+.row2{
+    width: 1903px;
+    height: 370px;
+    background: url(images/bg.jpg);
+    background-size:100%  ;
+    background-position-y:center;
+    text-align: center;
+}
+.box{
+    width: 1608px;
+    height: 318px;
+    overflow: hidden;
+    text-align: center;
+}
+.row2 .box div{
+    float: left;
+    width: 241px;
+    height: 74px;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.row2 div img{
+   height: 60%;
+   width: 50%;
+    padding: 0 13px;
+    filter: brightness(.75);
+}
+.row2 div img:hover{
+    filter: brightness(1);
+    transition: all 0.5s ;
+    cursor: pointer;
+}
+.row2 h2 {
+    position: relative;
+    top: 30px;
+font-size: 40px;
+color: #ffffff;
+font-weight: 400;
+}
+.map{
+    margin-top: 0px;
+    background-color: #f4f4f4;
+}
+.map div{
+    width: 1902px;
+    height: 529px;
+    background: url(images/map.jpg);
+}
+.map h2 {
+    font-size: 40px;
+    color: #1a1a1a;
+}
+.map h5{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 100;
+}
+.tip{
+    height: 54px;
+    background-color: black;
+    text-align: center;
+}
+.tip ul li {
+    color: #ffffff;
+    float: left;
+    padding-top: 15px;
+    padding-right : 350px;
+    
+}
+.tip ul li:hover a{
+    color: #0078d4;
+}
+.tip ul li:hover{
+    color: #0078d4;
+}
+.tip ul li a{
+    color: #ffffff;
+    text-decoration: none;
 }

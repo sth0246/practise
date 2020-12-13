@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style> 
-div
-{
-width:100px;
-height:100px;
-background:blue;
-transition:width 2s;
--moz-transition:width 2s; /* Firefox 4 */
--webkit-transition:width 2s; /* Safari and Chrome */
--o-transition:width 2s; /* Opera */
-}
-
-div:hover
-{
-width:300px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aaa{
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: 50%;
+            background-color: red;
+        }
+        .active{
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: 50%;
+            background-color: skyblue;
+        }
+    </style>
 </head>
 <body>
-
-<div></div>
-
-<p>请把鼠标指针移动到蓝色的 div 元素上，就可以看到过渡效果。</p>
-
-<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
-
+    <ul>
+        <li class="aaa"></li>
+        <li class="aaa"></li>
+        <li class="aaa"></li>
+        <li class="aaa"></li>
+        <li class="aaa"></li>
+        <li class="aaa"></li>
+    </ul>
 </body>
+<script>
+    var oli = document.getElementsByTagName("li")
+    var num = 0
+    function click(){
+            oli[num].className="active"
+            num++}
+            setInterval("click()",300)
+</script>
 </html>

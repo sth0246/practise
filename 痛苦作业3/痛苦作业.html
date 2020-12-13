@@ -158,10 +158,19 @@
             </li>
         </ul>
     </div>
-    <div class="changeimg">
+    <div class="changeimg" id="ali">
+        <ul>
+            <li class="ali"></li>
+            <li class="ali"></li>
+            <li class="ali"></li>
+            <li class="ali"></li>
+            <li class="ali"></li>
+
+        </ul>
         <div class="windows">
-            <div id="view"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img
-                    src="images/img3.jpg" alt=""><img src="images/img4.jpg" alt=""><img src="images/img5.jpg" alt="">
+            <div id="view">
+                <img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""><img src="images/img3.jpg"
+                    alt=""><img src="images/img4.jpg" alt=""><img src="images/img5.jpg" alt="">
             </div>
         </div>
     </div>
@@ -179,19 +188,19 @@
     </div>
     <div class="row">
         <ul>
-            <li>电子商务
+            <li class="auto">电子商务
                 <dd>
                     <dl></dl>
                 </dd>
             </li>
-            <li>数字媒体
+            <li class="auto">数字媒体
             </li>
-            <li>备份与存档
+            <li class="auto">备份与存档
             </li>
-            <li>大数据和分析</li>
-            <li>开发和测试</li>
-            <li>游戏</li>
-            <li>数字营销</li>
+            <li class="auto">大数据和分析</li>
+            <li class="auto">开发和测试</li>
+            <li class="auto">游戏</li>
+            <li class="auto">数字营销</li>
         </ul>
     </div>
     <div class="a"></div>
@@ -253,23 +262,59 @@
             </ul>
         </div>
         <div class="botom">
-            
+
         </div>
 </body>
 <script>
     var pull1 = document.getElementById("main")
     var menu1 = document.getElementById("lev2")
     var btn1 = document.getElementById("btn")
+    var change = document.getElementById("view")
+    var oli = document.getElementsByClassName("ali")
+    var ali1 = Array.from(oli)
+    var aauto = document.getElementsByClassName("auto")
+    var i = 0
+    var num = 0
+
+
+    for(i=0;i<aauto.length;i++){
+        aauto[i].onclick = function(){
+            
+        }
+    }
+    ali1[0].className="active"      
+    function changeImg() {
+        if(num==0){
+            ali1[4].className="ali"
+        }
+        if(num>=1){
+            ali1[num-1].className="ali"
+        }
+        
+        change.style.left = "-" + i + "px"
+        ali1[num].className="active"
+        num++
+        i += 1581
+        if (i > 6324) {
+            i = 0
+        }
+        if (num==5){
+            num=0
+        }
+       
+      
+    }
+    setInterval("changeImg()", 1000)
     function menu() {
-        menu1.style.display = "block"
-    }
+            menu1.style.display = "block"
+        }
     function menua() {
-        menu1.style.display = "none"
-    }
+            menu1.style.display = "none"
+        }
     function pull() {
-        pull1.style.height = 1660 + "px"
-        btn1.style.display = "none"
-    }
+            pull1.style.height = 1660 + "px"
+            btn1.style.display = "none"
+        }
 
 </script>
 

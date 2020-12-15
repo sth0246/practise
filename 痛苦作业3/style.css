@@ -73,7 +73,7 @@ p {
     left: 250px;
     width: 250px;
     background-color: black;
-    z-index: 11;
+    z-index: 22;
 }
 .lev2 li{
     color: white;
@@ -111,7 +111,7 @@ p {
     color: #0078d4;
 }
 .changeimg{
-    height: 430px;
+    height: 442px;
     width: 100%;
     background-color: #1a1a1a;
 }
@@ -123,8 +123,8 @@ p {
 .changeimg ul{
     position: relative;
     top: 340px;
-    left: 605px;
-    z-index: 99;
+    left: 40%;
+    z-index: 11;
 }
 .ali {
     float: left;
@@ -189,7 +189,7 @@ background-color: #e2e6ec;
 .row ul {
     margin-top: 60px;
 }
-.row li {
+.auto {
     color: black;
     margin-left: 100px;
     width: 130px;
@@ -198,23 +198,70 @@ background-color: #e2e6ec;
     cursor: pointer;
     touch-action: manipulation;
 }
-.row li:hover {
+.autox {
     color: white;
+    margin-left: 100px;
+    width: 130px;
+    list-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    touch-action: manipulation;
     background-color: black;
 }
 
-.row ul li dd{
+.au{
     display: none;
     position: absolute;
     top: 60px;
     left: 310px;
-    height: 288px;
-    width: 400px;
-    background-color: pink;
+    height: 300px;
+    width: 750px;
+    background-color:  #0078d4;
     cursor: auto;
+    transition: all 1s;
 }
-.row li:hover dd{
+.aux{
     display: block;
+    position: absolute;
+    top: 60px;
+    left: 310px;
+    height: 300px;
+    width: 750px;
+    background-color:  #0078d4;
+    cursor: auto;
+    transition: all 1s;
+}
+.row h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+.row p{
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+}
+.row div{
+    position: relative;
+    top: 35px;
+    right: 290px;
+    width: 140px;
+    height: 26px;
+    border: 1px solid white;
+    padding: 7px 7px;
+    transition: all 1s;
+}
+.row div:hover{
+    background-color: white;
+    color: #0078d4;
+}
+.row div:hover a{
+    color: #0078d4;
+}
+.row div a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
 }
 .a{
     height: 410px;
@@ -238,6 +285,7 @@ background-color: #e2e6ec;
     z-index: 99;
     cursor: pointer;
     border: none;
+    outline: none;
 }
 .title-rd{
    margin: 0 auto;

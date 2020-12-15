@@ -30,7 +30,7 @@ body{
 .nav ul {
     position: relative;
     left: 110px;
-    z-index:10;
+    z-index:99;
 }
 .nav li a{
     color: white;
@@ -73,7 +73,7 @@ p {
     left: 250px;
     width: 250px;
     background-color: black;
-    z-index: 11;
+    z-index: 99;
 }
 .lev2 li{
     color: white;
@@ -148,12 +148,15 @@ p {
     position: relative;
     left: 0px;
     transition: all 1s;
+    z-index: 88;
 }
 #view img{
     width: 1581px;
     display: block;
     float: left;
     height: 100%;
+    
+    
 }
 .guide{
 width: 1903px;
@@ -189,7 +192,7 @@ background-color: #e2e6ec;
 .row ul {
     margin-top: 60px;
 }
-.row li {
+.auto {
     color: black;
     margin-left: 100px;
     width: 130px;
@@ -198,12 +201,19 @@ background-color: #e2e6ec;
     cursor: pointer;
     touch-action: manipulation;
 }
-.row li:hover {
+.lix {
     color: white;
+    margin-left: 100px;
+    width: 130px;
+    list-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    touch-action: manipulation;
     background-color: black;
 }
 
-.row ul li dd{
+.au{
+    color: white;
     display: none;
     position: absolute;
     top: 60px;
@@ -213,8 +223,16 @@ background-color: #e2e6ec;
     background-color: pink;
     cursor: auto;
 }
-.row li:hover dd{
+.aux{
+    color: white;
     display: block;
+    position: absolute;
+    top: 60px;
+    left: 310px;
+    height: 288px;
+    width: 400px;
+    background-color: pink;
+    cursor: auto;
 }
 .a{
     height: 410px;
@@ -238,6 +256,11 @@ background-color: #e2e6ec;
     z-index: 99;
     cursor: pointer;
     border: none;
+}
+#btn:focus{
+    border: 0 none;
+    outline: none;
+
 }
 .title-rd{
    margin: 0 auto;

@@ -5,17 +5,22 @@ var change = document.getElementById("view")
 var oli = document.getElementsByClassName("ali")
 var ali1 = Array.from(oli)
 var aauto = document.getElementsByClassName("auto")
+var aauto1 = Array.from(aauto)
 var aau = document.getElementsByClassName("au")
 var aau1 = Array.from(aau)
 var i = 0
 var num = 0
 
 
-for(m=0;m<aauto.length;m++){
-    aauto[m].index = m
-    aauto[m].onclick = function(){
-       aau1[this.index].style.display="block"
-       aauto[this.index].className="lix"
+for(let m = 0;m<aauto1.length;m++){
+    aauto1[m].index = m
+    aauto1[m].onclick = function(){
+        for(let j =0;j < aauto1.length;j++){
+            aauto1[j].className = 'auto';
+            aau1[j].className = 'au';
+        }
+        this.className = 'autox';
+        aau1[aauto1[m].index].className = 'aux'
     }
 }
 ali1[0].className="active"      

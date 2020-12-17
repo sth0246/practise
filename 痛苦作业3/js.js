@@ -8,9 +8,9 @@ var aauto = document.getElementsByClassName("auto")
 var aauto1 = Array.from(aauto)
 var aau = document.getElementsByClassName("au")
 var aau1 = Array.from(aau)
+var feet = document.getElementById("feet")
 var i = 0
 var num = 0
-
 
 for(let m = 0;m<aauto1.length;m++){
     aauto1[m].index = m

@@ -9,9 +9,27 @@ var aauto1 = Array.from(aauto)
 var aau = document.getElementsByClassName("au")
 var aau1 = Array.from(aau)
 var feet = document.getElementById("feet")
+var fot = document.getElementById("fot")
+var feet = document.getElementById("feet")
+var afot = fot.children
+var afot1 = Array.from(afot)
 var i = 0
 var num = 0
+var boor = 1
 
+feet.onclick = function(){
+    if(boor == 1){
+        fot.style.display = "block"
+        boor = 0
+    }
+    else{
+            fot.style.display = "none"
+            boor = 1
+    }
+
+}
+afot1[0].addEventListener('click',function(){feet.innerHTML = 'English'},false)
+afot1[1].addEventListener('click',function(){feet.innerHTML = '简体中文'},false)
 for(let m = 0;m<aauto1.length;m++){
     aauto1[m].index = m
     aauto1[m].onclick = function(){

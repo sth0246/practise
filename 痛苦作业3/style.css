@@ -166,8 +166,12 @@ width: 1903px;
 height: 172px;
 background-color: #e2e6ec;
 text-align: center;
+margin: auto auto;
 }
-.guide div{
+.guide1{
+    display: inline-block;
+}
+.guide div div{
     width: 527px;
     height: 172px;
     float: left;
@@ -184,7 +188,7 @@ text-align: center;
     background: url(images/zxgg.jpg);
 }
 
-.guide div:hover{
+.guide div div:hover{
     filter: opacity(.5);
 }
 .row{
@@ -428,7 +432,7 @@ font-weight: 400;
 }
 .footer div{
     float: left;
-    width: 390px;
+    width: 25%;
     height: 421px;
 }
 .footer div p{
@@ -473,4 +477,29 @@ font-weight: 400;
 }
 #feet:hover{
     color: #0078d4;
+}
+#fot{
+    display: none;
+    position: relative;
+    float: left;
+    top: -110px;
+    left: 100px;
+    background-color: white;
+    z-index: 99;
+}
+#feet{
+    margin-left: 100px;
+}
+#fot li{
+    float: none;
+    font-size: 12px;
+    color: gray;
+    padding: 8px 20px;
+    margin: 0px;
+    margin-left: -40px;
+    list-style: none;
+}
+#fot li:hover{
+    color: white;
+    background-color: #0078d4;
 }

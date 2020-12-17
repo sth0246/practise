@@ -1,99 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-              * {
-	transition: all 1s;
-	margin: 0px;
-	padding: 0px;
-}
-        .box{
-         width: 800px;
-         height: 300px;
-          overflow: hidden;
-        }
-        ul{
-            width: 4000px;
-            height: 300px;
-            position: relative;
-            left:0px ;
-        }
-        li{
-            float: left;
-        }
-        img{
-            width: 800px;
-            height: 300px;
-        }
-        #cut>a{
-            width: 40px;
-            height: 40px;
-        }
-        #btn{
-            position: absolute;
-            left: 350px;
-            top: 250px;
-        }
-        #btn>a{
-            width: 20px;
-            height: 20px;
-            float: left;
-            background-color: red;
-            border-radius: 50%;
-        }
-        #btn .on {
-            background-color: green;
-        }
-    </style>
 </head>
-
 <body>
-    <div class="box" id="position">
-        
-            <ul id="change">
-                <li><img src="images/img1.jpg" alt=""></li>
-                <li><img src="images/img2.jpg" alt=""></li>
-                <li><img src="images/img3.jpg" alt=""></li>
-                <li><img src="images/img4.jpg" alt=""></li>
-                <li><img src="images/img5.jpg" alt=""></li>
-            </ul>
-        
-        <div id="cut">
-            <a href="#"><</a>
-            <a href="#">></a>
-        </div>
-        <div id="btn">
-            <a href="#" class="on"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-    </div>
+    <button id="btn">点击此处</button>
 </body>
 <script>
-    var i = 0
-    var z = 0
-    var position = document.getElementById("change")
     var btn = document.getElementById("btn")
-    
-    function changeimg(){
-        i+=800
-        z++
-        position.style.left = "-"+i+"px"
-        
-        if(i==3200){
-            i = 0
-            z = 0
-        }
-    }
-    setInterval("changeimg()",1000)
-    // function aaa(){
-    //     aaa = setInterval("changeimg()",1)
-    // }
-    </script>
+    btn.addEventListener('click',function(){alert("let me try try")})
+</script>
 </html>

@@ -11,7 +11,13 @@
     content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
 <body>
-    <div class="header"><a href="#"><img src="images/logo.jpg" alt=""></a></div>
+    <div class="header">
+        <a href="#"><img src="images/logo.jpg" alt=""></a>
+        <p>登录Azure门户</p>
+        <button onclick="pinp()"></button>
+        <input type="text" value="请输入搜索关键词" id="inp">
+        
+    </div>
     <div class="nav">
         <ul>
             <li><a href="#">认识Azure</a>
@@ -47,6 +53,7 @@
             <li><a href="#">Azure市场</a></li>
             <li><a href="#">Azure Global/China</a></li>
         </ul>
+        <p id="reply"><a href="#">申请使用></a></p>
     </div>
     <div class="lev2" id="lev2" onmouseover="menu()" onmouseout="menua()">
         <ul>
@@ -175,18 +182,19 @@
         </div>
     </div>
     <div class="guide">
-       <div class="guide1">
-        <a href="#">
-            <div class="img1"></div>
-        </a>
-        <a href="#">
-            <div class="img2"></div>
-        </a>
-        <a href="#">
-            <div class="img3"></div>
-        </a>
-       <div style="clear: both;"></div></div>
-        
+        <div class="guide1">
+            <a href="#">
+                <div class="img1"></div>
+            </a>
+            <a href="#">
+                <div class="img2"></div>
+            </a>
+            <a href="#">
+                <div class="img3"></div>
+            </a>
+            <div style="clear: both;"></div>
+        </div>
+
     </div>
     <div class="row">
         <ul>
@@ -372,29 +380,30 @@
             </ul>
             <br>
             <p>账户</p>
-                <ul>
-                    <li><a href="#">Azure门户</a></li>
-                    <li><a href="#">充值，订阅与账单</a></li>
-                    <li><a href="#">企业门户网站</a></li>
-                </ul>
+            <ul>
+                <li><a href="#">Azure门户</a></li>
+                <li><a href="#">充值，订阅与账单</a></li>
+                <li><a href="#">企业门户网站</a></li>
+            </ul>
         </div>
-       
+
         <ul class="foot">
-           
+
             <li id="feet" style="cursor: default;">简体中文</li>
             <li><a href="#">访问全球版Azure网站</a></li>
             <li><a href="#">沪ICP备13015306号-25</a></li>
             <li><a href="#"> 沪公网安备 31011502002224号
-          </a></li>
+                </a></li>
             <li><a href="#">隐私</a></li>
-            <li style="float: right; margin: 0px 0px;padding: 0px 0px;"><a href="#"><img src="images/logo.jpg" alt=""></a></li>
+            <li style="float: right; margin: 0px 0px;padding: 0px 0px;"><a href="#"><img src="images/logo.jpg"
+                        alt=""></a></li>
         </ul>
     </div>
     <ul id="fot">
         <li>English</li>
         <li>简体中文</li>
     </ul>
-</div>
+    </div>
 </body>
 <script src="js.js"></script>
 

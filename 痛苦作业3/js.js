@@ -13,10 +13,15 @@ var fot = document.getElementById("fot")
 var feet = document.getElementById("feet")
 var afot = fot.children
 var afot1 = Array.from(afot)
+var ainp = document.getElementById("inp")
 var i = 0
 var num = 0
 var boor = 1
 
+function pinp(){
+    ainp.style.width = "10%"
+  
+}
 feet.onclick = function(){
     if(boor == 1){
         fot.style.display = "block"

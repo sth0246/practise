@@ -18,12 +18,54 @@ body{
     left: 160px;
     top: 20px;
 }
+.header button{
+    border: none;
+    float: right;
+    height: 103%;
+    width: 2%;
+    outline: none;
+}
+.header p{
+    float: right;
+    display: block;
+    margin-right: 200px;
+    margin-left: 15px;
+    padding-top: 13px ;
+}
+.header p:hover{
+    color: white;
+}
+#inp{
+    border: none;
+    display:block;
+    width: 0px;
+    height: 98%;
+    float: right;
+    transition: all 1s;
+    outline: none;
+}
 .nav{
     float: left;
     height: 60px;
     width: 100%;
     background: #1a1a1a;
     z-index:10;
+}
+#reply{
+    display: block;
+    width: 7%;
+    float: right;
+    background-color: #d83b01;
+    padding:13px 15px ;
+    margin-right: 60px;
+}
+#reply a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+#reply:hover{
+    background-color: #f47119;
 }
 .nav li{
     float: left;
@@ -120,7 +162,7 @@ p {
     background-color: #1a1a1a;
 }
 .windows{
-    width: 1581px;
+    width: 100%;
     height: 370px;
     overflow: hidden;
 }
@@ -162,7 +204,7 @@ p {
     
 }
 .guide{
-width: 1903px;
+width: 100%;
 height: 172px;
 background-color: #e2e6ec;
 text-align: center;
@@ -170,13 +212,18 @@ margin: auto auto;
 }
 .guide1{
     display: inline-block;
+    width: 90%;
 }
 .guide div div{
-    width: 527px;
-    height: 172px;
+    width: 33.3%;
+    height: 171px;
     float: left;
     cursor: pointer;
     transition: all 500ms;
+    z-index: 0;
+}
+.guide div div{
+  background-size: 100% 100%;
 }
 .img1{
     background: url(images/jswd.jpg);
@@ -189,7 +236,7 @@ margin: auto auto;
 }
 
 .guide div div:hover{
-    filter: opacity(.5);
+    filter: brightness(.93);
 }
 .row{
     position: absolute;
@@ -199,6 +246,8 @@ margin: auto auto;
 }
 .row ul {
     margin-top: 60px;
+    z-index: 99;
+    transition: all 1s;
 }
 .auto {
     color: black;
@@ -208,6 +257,8 @@ margin: auto auto;
     padding: 10px 20px;
     cursor: pointer;
     touch-action: manipulation;
+    border-right: 2px solid rgb(150, 149, 149);
+    
 }
 .autox {
     color: white;
@@ -217,30 +268,32 @@ margin: auto auto;
     padding: 10px 20px;
     cursor: pointer;
     touch-action: manipulation;
-    background-color: black;
+    border-right: 3px solid white;
 }
 
 .au{
     display: none;
     position: absolute;
     top: 60px;
-    left: 310px;
+    left: 320px;
     height: 300px;
     width: 750px;
     background-color:  #0078d4;
     cursor: auto;
     transition: all 1s;
+    padding-left: 10px;
 }
 .aux{
     display: block;
     position: absolute;
     top: 60px;
-    left: 310px;
+    left: 320px;
     height: 300px;
     width: 750px;
     background-color:  #0078d4;
     cursor: auto;
     transition: all 1s;
+    padding-left: 100px;
 }
 .row h2{
     font-size: 40px;

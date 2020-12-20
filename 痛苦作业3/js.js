@@ -14,13 +14,27 @@ var feet = document.getElementById("feet")
 var afot = fot.children
 var afot1 = Array.from(afot)
 var ainp = document.getElementById("inp")
+var btnc = document.getElementById("btnc")
+var win = document.getElementById("win")
 var i = 0
+var u = 0
 var num = 0
 var boor = 1
 
+window.onload = function(){
+  u = win.clientWidth
+}
 function pinp(){
+    ainp.style.backgroundColor = "white"
     ainp.style.width = "10%"
-  
+    btnc.style.background = "url(images/butn-click.jpg)"
+    btnc.onmousedown = function(){
+        btnc.style.background = "url(images/butn-click-click.jpg)"
+    }
+    btnc.onmouseup = function(){
+        btnc.style.background = "url(images/butn-click.jpg)"
+    }
+    
 }
 feet.onclick = function(){
     if(boor == 1){
@@ -58,8 +72,8 @@ function changeImg() {
     change.style.left = "-" + i + "px"
     ali1[num].className="active"
     num++
-    i += 1581
-    if (i > 6324) {
+    i += u
+    if (i > (4*u)) {
         i = 0
     }
     if (num==5){
@@ -68,7 +82,7 @@ function changeImg() {
    
   
 }
-setInterval("changeImg()", 1000)
+setInterval("changeImg()", 2000)
 function menu() {
         menu1.style.display = "block"
     }

@@ -2,7 +2,7 @@
     margin: auto;
 }
 html{
-    
+    width: 100%;
 }
 body{
     min-width:1200px;
@@ -21,9 +21,10 @@ body{
 .header button{
     border: none;
     float: right;
-    height: 103%;
-    width: 2%;
+    height: 44px;
+    width: 44px;
     outline: none;
+    background: url(images/btn.jpg);
 }
 .header p{
     float: right;
@@ -39,7 +40,8 @@ body{
     border: none;
     display:block;
     width: 0px;
-    height: 98%;
+    background-color: #1a1a1a;
+    height: 104%;
     float: right;
     transition: all 1s;
     outline: none;
@@ -162,9 +164,15 @@ p {
     background-color: #1a1a1a;
 }
 .windows{
+    position: absolute;
+    top: 150px;
     width: 100%;
     height: 370px;
     overflow: hidden;
+}
+.aaa{
+    height: 38px;
+    width: 20px;
 }
 .changeimg ul{
     position: relative;
@@ -189,16 +197,21 @@ p {
     background-color: white
 }
 #view{
-    width: 7905px;
+    width: 500%;
     height: 370px;
     position: relative;
     left: 0px;
     transition: all 1s;
 }
-#view img{
-    width: 1581px;
-    display: block;
+#view div{
+    margin: 0px;
     float: left;
+    width: 20%;
+    height: 100%;
+}
+#view img{
+    width: 100%;
+    display: block;
     height: 100%;
     
     
@@ -362,7 +375,8 @@ margin: auto auto;
     color: #1A1A1A;
     font-weight: 500;
     line-height: 48px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 .container{
     width: 1680px;
@@ -555,4 +569,28 @@ font-weight: 400;
 #fot li:hover{
     color: white;
     background-color: #0078d4;
+}
+.fix{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: url(images/qr-code-fix.jpg);
+    width: 39px;
+    height: 39px;
+    border: 1px solid gray;
+}
+.fix:hover{
+    background: url(images/qr-code-fix-x.jpg);
+}
+.fix div{
+    display: none;
+    position: relative;
+    top: -103px;
+    right: 110px;
+    background: url(images/qr-code-float.jpg);
+    width: 100px;
+    height: 143px;
+    transition: all 1s;
+}.fix:hover div{
+    display: block;
 }

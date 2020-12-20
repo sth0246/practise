@@ -60,6 +60,17 @@ for(let m = 0;m<aauto1.length;m++){
         aau1[aauto1[m].index].className = 'aux'
     }
 }
+for(let q = 0;q<ali1.length;q++){
+    ali1[q].index = q
+    ali1[q].onclick = function(){
+        for(let s = 0;s<ali1.length;s++){
+        ali1[s].className ="ali"}
+        this.className = 'active';
+        i = (q+1)*u
+        change.style.left = "-" + i + "px"
+        num = q
+    }
+}
 ali1[0].className="active"      
 function changeImg() {
     if(num==0){

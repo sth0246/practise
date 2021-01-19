@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+    border-bottom: 1px solid #dadce0;
+}
+.nav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.nav img{
+    height: 50%;
+    margin-top: 1%;
+}   
+.nav div{
+    float: right;
+    width: 40%;
+    height: 100%;
+    margin-right: -10%;
+    margin-top: 1%;
+}
+.nav li{
+    float: left;
+    padding: 4px 20px;
+    font-size: 14px;
+}
+.row{
+    width: 100%;
+    background: url(../img2/row1.jpg);
+    background-size: 100% 100%;
+}
+.logo-li{
+    width: 10%;
+    height: 100%;
+    position: relative;
+    left: 87%;
+}
+.logo-li ul{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.logo-li li{
+    width: 16.8%;
+    height: 5.47%;
+    margin-bottom: 14%;
+ 
+}
+.logo-li li img{
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.txt div{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    width: 30%;
+    height: 50%;
+}
+.txt img{
+    width: 15%;
+}
+.txt h1{
+    font-size: 28px;
+    margin-top: 4%;
+    color: #1f2329;
+}
+.txt p,.txt h2{
+    width: 65%;
+    font-size: 16px;
+    color: #1f2329;
+    font-weight: normal;
+}
+.txt h2{
+    font-size: 16px;
+    color: #1f2329;
+    font-weight: normal;
+    margin: 5% 0;
+}
+.txt a{
+    font-size: 16px;
+    color: #3370ff;
+}

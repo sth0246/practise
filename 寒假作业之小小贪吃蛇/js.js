@@ -2,7 +2,7 @@ var height = window.innerHeight;//获取屏幕高度
 var map = document.getElementsByClassName("box")[0];//获取画布
 var score = document.getElementsByClassName("box")[1];//获取计分板
 var viewed_score = score.getElementsByTagName("span")[0];//提示当前长度
-var stared = score.getElementsByTagName("div")[1]//开始和暂停键
+var stared = score.getElementsByTagName("div")[2]//开始和暂停键
 var box_width = height / 40;//设置小格子宽度
 var boxs = map.children;//获取小格子
 var head = "right";//头（行驶）的方向，默认为右
@@ -18,6 +18,11 @@ var gaming = false;//记录是否在游戏
 var rank = new Array;//设置一个排名榜数组
 var rank_div = document.getElementsByClassName("rank")[0];//获取排名榜的节点，便于从此节点往下用js创造div
 var gaming_times = 1 //设置游戏次数，便于排名榜填入成绩和js创建新div
+var bones = [9,19,29,39]//设置一个彩蛋数组，当随机数等于彩蛋数组中的任何一个，这次的食物变色，并且有特殊效果
+var lev = document.getElementsByClassName("lev")[0];
+var lev_span = lev.getElementsByTagName("span");
+var speed = 300 //设置一个速度参数
+var body_color = "rgb(32, 37, 107)"
 
 map.style.width = height + "px";//画布的长宽
 map.style.height = height + "px";
@@ -26,6 +31,28 @@ score.style.width = 0.382 * height + "px"
 score.style.height = height + "px"
 score.style.marginLeft = 0.01 * height + "px"
 score.style.backgroundColor = "rgb(116, 123, 231)"
+lev_span[0].style.border = "3px solid #47aece"
+for(var i = 0;i<lev_span.length;i++){
+    lev_span[i].index = i;
+    lev_span[i].onclick = function(){
+        for(var j = 0;j<lev_span.length;j++){
+            lev_span[j].style.border = "2px solid black"
+        }
+        if (this.index == 0) {
+            speed = 300;
+        }
+        if (this.index == 1) {
+            speed = 200;
+        }
+        if (this.index == 2) {
+            speed = 100;
+        }
+        
+        this.style.border = "3px solid #47aece"
+        console.log(speed)
+        console.log(this.index)
+    }
+}
 for (var i = 0; i < 1600; i++) {//向画布里填格子并给他们属性
     var box = document.createElement("div")
     box.style.height = box_width + "px";
@@ -81,6 +108,24 @@ for (var i = 0; i < 3; i++) {
     snake[i].style.borderRadius = "50%"
 }
 function move() {//小蛇如何行走
+    if (x < 0 || x == 40) {
+        gameover()
+    }
+    if (y < 0 || y == 40) {
+        gameover()
+    }
+    switch(snake_length){
+        case 5 : clearInterval(timer);timer = setInterval("move()", 0.9*speed);break;
+        case 7: clearInterval(timer);timer = setInterval("move()", 0.8*speed);break;
+        case 9: clearInterval(timer);timer = setInterval("move()", 0.7*speed);break;
+        case 11: clearInterval(timer);timer = setInterval("move()", 0.6*speed);break;
+        case 14: clearInterval(timer);timer = setInterval("move()", 0.5*speed);break;
+        case 17: clearInterval(timer);timer = setInterval("move()", 0.4*speed);break;
+        case 20: clearInterval(timer);timer = setInterval("move()", 0.3*speed);break;
+        case 22: clearInterval(timer);timer = setInterval("move()", 0.2*speed);break;
+        case 24: clearInterval(timer);timer = setInterval("move()", 0.1*speed);break;
+        case 25: clearInterval(timer);timer = setInterval("move()", 0.05*speed);break;
+    }
     for (var i = 0; i < snake_length - 1; i++) {//小蛇头撞到自己时，这个for循环也涵盖了小蛇反向走致死的情况
         if (map_position[x][y] == snake[i]) {
             gameover()
@@ -134,12 +179,7 @@ function move() {//小蛇如何行走
         }
         x++;
     }
-    if (x < 0 || x > 39) {
-        gameover()
-    }
-    if (y < 0 || y > 39) {
-        gameover()
-    }
+
     viewed_score.innerHTML = "您当前的长度<br>" + snake_length//计分板提示长度
     for (var i = 0; i < 40; i++) {//放止刷新地图时把食物刷掉
         for (var j = 0; j < 40; j++) {
@@ -160,13 +200,13 @@ function star() {
         clearInterval(timer)
         stared.innerHTML = "点击开始"
     } else {
-        timer = setInterval("move()", 100);
+        timer = setInterval("move()", speed);
         stared.innerHTML = "点击暂停"
     }
     gaming = !gaming;
 }
 //监听器
-document.onkeyup = keylinstener;
+document.onkeydown = keylinstener;
 function keylinstener() {
     var keycode = event.which || event.keyCode;
     if (keycode == 37) {
@@ -209,3 +249,4 @@ food()
 
 
 console.log(height)
+console.log(x,y)

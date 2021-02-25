@@ -1,8 +1,14 @@
 .box {
     float: left;
+    overflow-y:hidden ;
 }
 *{
     margin: 0;
+}
+.lev span{
+    padding: 2px 2px;
+    border: 2px solid black;
+    cursor: pointer;
 }
 .html{
     overflow: hidden;
